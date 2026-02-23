@@ -41,4 +41,9 @@ ament_target_dependencies(
   "rclcpp"
   "base_interfaces_demo"
 )
+3.调试：
+ros2 service call /话题名称                      例：ros2 service call /add_ints
+然后TAB补齐，选择需要的数据类型
+ros2 service call /话题名称 数据类型 "{'请求1': 数据,'请求2': 数据 }"
+例：ros2 service call /add_ints base_interfaces_demo/srv/Addints "{'num1': 10,'num2': 30}"
 
