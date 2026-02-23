@@ -4,7 +4,7 @@
 在base_interfaces_demo文件下新建srv文件夹，srv文件夹下新建Addints.srv文件
 2.编辑配置文件
 (1)package.xml
-如果base_interfaces_demo文件下没有添加过任何接口，则配置步骤同话题通信
+如果base_interfaces_demo文件下没有添加过任何接口，则配置步骤同话题通信(各种依赖）
 如果base_interfaces_demo文件下已经添加过其他接口，则不用进行任何修改
 (2)CMakeList.txt文件
 若干base_interfaces_demo文件下没有配置过任何接口，则配置步骤同话题通信（即需要配置相应代码将.srv文件转换成对应的C++和Python文件）
