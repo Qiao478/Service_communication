@@ -21,3 +21,18 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 . install/setup.bash
 ros2 interfaces show base_interfaces_demo/srv/Addints
 若编写成功则终端输出的内容与srv文件内容一致
+
+二、实现
+C++
+1.服务端通信
+在功能包cpp02_service的src目录下新建C++文件的名——service.cpp
+2.编辑配置文件
+在CMakeList.txt文件中添加dem02_client的配置文件
+add_executable(dem02_client src/dem02_client.cpp)
+target_compile_features(dem01_server PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+ament_target_dependencies(
+  dem02_client
+  "rclcpp"
+  "base_interfaces_demo"
+)
+
